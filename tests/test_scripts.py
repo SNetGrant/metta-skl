@@ -17,4 +17,4 @@ def run_script(fname):
 
 def test_scripts():
     process_exceptions(run_script(f"{pwd}/test_hello_world.metta"))
-    process_exceptions(run_script(f"{pwd}/test_generator.metta"))
+    process_exceptions(run_script(f"{pwd}/test_kmeans.metta"))

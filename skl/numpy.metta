@@ -1,0 +1,15 @@
+
+; numpy bindings
+! (bind! np (py-atom numpy))
+! (bind! np-eye (py-dot np eye))
+! (bind! np-array (py-dot np asarray))
+! (bind! np-matmul (py-dot np matmul))
+! (bind! np-sum (py-dot np sum))
+! (bind! np-divide (py-dot np divide))
+! (bind! np-subtract (py-dot np subtract))
+! (bind! np-expand-dims (py-dot np expand_dims))
+! (bind! np-argmin (py-dot np argmin))
+! (bind! np-one-hot-encode (py-atom "lambda labels, eye: eye[labels]"))
+! (bind! np-linalg-norm (py-dot np linalg.norm))
+! (bind! np-transpose (py-dot np transpose))
+! (bind! np-shape (py-atom "lambda x, i: x.shape[i]"))
