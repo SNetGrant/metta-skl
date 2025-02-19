@@ -13,9 +13,5 @@ RUN pip install -e .
 # Install tox (if not part of the dependencies)
 RUN pip install --no-cache-dir tox pytest
 
-# Copy the rest of the application code
-COPY . /app/
-
-RUN pip install -e .
 # Run tox (this will use the tox cache from previous runs)
 CMD ["tox"]

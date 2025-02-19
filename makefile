@@ -3,6 +3,7 @@
 # Docker image and container names
 IMAGE_NAME = skl
 CONTAINER_NAME = skl_pytest
+CWD = $(shell pwd)
 
 # Build the Docker image
 build:
@@ -15,7 +16,7 @@ test:
 	docker stop $(CONTAINER_NAME) || true
 	docker rm $(CONTAINER_NAME) || true
 	@echo "Running pytest in the container..."
-	docker run -it --name $(CONTAINER_NAME) $(IMAGE_NAME) pytest
+	docker run -it --mount type=bind,src=$(CWD),dst=/app --name $(CONTAINER_NAME) $(IMAGE_NAME) pytest -s
 
 # Default target
 all: build test

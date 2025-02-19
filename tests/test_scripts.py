@@ -1,6 +1,5 @@
 from hyperon import MeTTa, E
 from pathlib import Path
-import skl
 # from skl import generator
 pwd = Path(__file__).parent
 
@@ -17,6 +16,5 @@ def run_script(fname):
 
 
 def test_scripts():
-    print(skl.generate_data())
     process_exceptions(run_script(f"{pwd}/test_hello_world.metta"))
     process_exceptions(run_script(f"{pwd}/test_generator.metta"))
